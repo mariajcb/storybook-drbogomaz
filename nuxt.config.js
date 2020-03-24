@@ -1,3 +1,4 @@
+require('dotenv').config()
 
 export default {
   mode: 'universal',
@@ -29,20 +30,22 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/components'
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    ['storyblok-nuxt', {accessToken: process.env.PREVIEW_TOKEN, cacheProvider: 'memory'}]
   ],
   /*
   ** Build configuration
@@ -53,5 +56,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  router: {
+    middleware: 'languageDetection'
   }
 }
