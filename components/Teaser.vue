@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="teaser">
-    <component v-if="slide" :blok="slide" :is="slide.component"></component>
+    <component v-if="slide" :blok="slide" :is="slide.component" />
     <div class="teaser__pag">
       <button @click="handleDotClick(index)"
               :key="index"
