@@ -10,7 +10,8 @@
       </ul>
     </nav>
     <a href="/" class="top-header__col top-header__logo">
-      <img src="//a.storyblok.com/f/42016/1096x313/0353bf6654/logo2.png">
+      <!-- <img src="//a.storyblok.com/f/42016/1096x313/0353bf6654/logo2.png"> -->
+      <span>Dr. Bogomaz</span>
     </a>
     <nav class="top-header__col top-header__second-nav">
       <ul class="top-header__nav top-header__nav--right">
@@ -35,11 +36,20 @@
     text-align: center;
     position: absolute;
     left: 50%;
-    img {
+    text-decoration: none;
+    color: #718FCB;
+    // img {
+    //   position: relative;
+    //   max-height: 60px;
+    //   left: -50%;
+    //   top: -15px;
+    // }
+    span {
+      font-family: 'Mrs Saint Delafield', cursive;
+      font-size: 2.75rem;
       position: relative;
       max-height: 60px;
       left: -50%;
-      top: -15px;
     }
   }
   .top-header__second-nav {

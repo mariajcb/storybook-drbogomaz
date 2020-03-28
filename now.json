@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "storyblok-drbogomaz",
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/now-builder",
+      "config": {}
+    }
+  ],
+  "scope": "bogomazm",
+  "regions": ["bru1"],
+  "public": false
+}
