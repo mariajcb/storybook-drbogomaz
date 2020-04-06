@@ -2,7 +2,7 @@ export const state = () => ({
   cacheVersion: '',
   language: 'en',
   settings: {
-    main_navi: []
+    main_nav: []
   }
 })
 

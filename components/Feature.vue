@@ -1,7 +1,7 @@
 <template>
   <div v-editable="blok" class="feature util__flex-eq">
     <img :src="resizedIcon" class="feature__icon">
-    <h1>{{ blok.name }}</h1>
+    <h2>{{ blok.name }}</h2>
     <div class="feature__description">
       {{ blok.description }}
     </div>

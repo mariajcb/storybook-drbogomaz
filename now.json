@@ -10,5 +10,10 @@
   ],
   "scope": "bogomazm",
   "regions": ["bru1"],
-  "public": false
+  "public": false,
+  "build": {
+    "env": {
+      "PREVIEW_TOKEN": "@preview_token"
+    }
+  }
 }
