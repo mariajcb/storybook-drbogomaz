@@ -1,25 +1,19 @@
 <template>
-  <header class="top-header util__flex util__container">
-    <nav class="top-header__col">
-      <ul class="top-header__nav">
-        <li v-for="(navitem, index) in $store.state.settings.main_nav" :key="index">
-          <nuxt-link class="top-header__link" :to="navitem.link.cached_url">
+  <header class="top-header">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <ul class="navbar-item navbar-start">
+        <li class="navbar-item" v-for="(navitem, index) in $store.state.settings.main_nav" :key="index">
+          <nuxt-link :to="navitem.link.cached_url">
             {{ navitem.name }}
           </nuxt-link>
         </li>
       </ul>
-    </nav>
-    <a href="/" class="top-header__col top-header__logo">
-      <!-- <img src="//a.storyblok.com/f/42016/1096x313/0353bf6654/logo2.png"> -->
-      <span>Dr. Bogomaz</span>
-    </a>
-    <nav class="top-header__col top-header__second-nav">
-      <ul class="top-header__nav top-header__nav--right">
-        <li>
-          <nuxt-link class="top-header__link" to="/en/blog">English</nuxt-link>
+      <ul class="navbar-end">
+        <li class="navbar-item">
+          <nuxt-link to="/en/blog">English</nuxt-link>
         </li>
-        <li>
-          <nuxt-link class="top-header__link" to="/rus/blog">Russian</nuxt-link>
+        <li class="navbar-item">
+          <nuxt-link to="/rus/blog">Russian</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -29,11 +23,8 @@
 <style lang="scss">
   .top-header {
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 25px 50px;
     max-width: 75em;
-    padding-left: 40px;
-    padding-right: 40px;
   }
   .top-header__logo {
     text-align: center;
@@ -55,30 +46,14 @@
       left: -50%;
     }
   }
-  .top-header__second-nav {
-    text-align: right;
+  a {
+    color: black;
+    font-weight: bold;
+    letter-spacing: .5px;
+    font-size: 24px;
   }
-  .top-header__nav {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .top-header__nav li {
-    padding: 0 20px 0 0;
-  }
-  .top-header__nav--right li {
-    padding-right: 0;
-    padding-left: 20px;
-  }
-  .top-header__link {
-    line-height: 1.5;
-    color: #000;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border .15s ease;
-  }
-  .top-header__link:hover {
-    border-bottom: 2px solid #000;
+  
+  a:hover {
+    color: #718FCB;
   }
 </style>

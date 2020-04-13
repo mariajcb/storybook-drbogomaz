@@ -1,14 +1,17 @@
 <template>
-  <div v-editable="blok" class="teaser">
+  <section v-editable="blok" class="teaser">
     <component v-if="slide" :blok="slide" :is="slide.component" />
-    <!-- <div class="teaser__pag">
+  </section>
+  <!-- <div v-editable="blok" class="teaser">
+    <component v-if="slide" :blok="slide" :is="slide.component" />
+    <div class="teaser__pag">
       <button @click="handleDotClick(index)"
               :key="index"
               v-for="(blok, index) in blok.body"
               :class="{'teaser__pag-dot--current': index == currentSlide}"
               class="teaser__pag-dot">Next</button>
-    </div> -->
-  </div>
+    </div>
+  </div> -->
 </template>
 
 <script>

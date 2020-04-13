@@ -1,10 +1,10 @@
 <template>
   <div>
-    <top-header/>
+    <!-- <TopHeader/> -->
     <main id="main" role="main">
       <nuxt/>
     </main>
-    <bottom-footer/>
+    <BottomFooter/>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import BottomFooter from '~/components/BottomFooter.vue'
 
 export default {
   components: {
-    TopHeader,
+    // TopHeader,
     BottomFooter
   }
 }
