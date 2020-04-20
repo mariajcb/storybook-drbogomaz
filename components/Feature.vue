@@ -1,10 +1,10 @@
 <template>
-  <div v-editable="blok" class="feature util__flex-eq">
+  <div v-editable="blok" class="feature">
     <img :src="resizedIcon" class="feature__icon">
-    <h2>{{ blok.name }}</h2>
-    <div class="feature__description">
+    <h2 class="title">{{ blok.name }}</h2>
+    <p>
       {{ blok.description }}
-    </div>
+    </p>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
 <style lang="scss">
 .feature {
   text-align: center;
-  padding: 30px 10px 100px;
+  padding: 4rem 2rem 6rem;
 }
 
 .feature__icon {

@@ -6,6 +6,7 @@
       <div class="container">
         <h1 class="title">{{ blok.title }}</h1>
         <p class="subtitle">{{ blok.text }}</p>
+        <button class="button is-medium">Contact Me</button>
       </div>
     </div>
   </div>
@@ -13,9 +14,10 @@
 
 <script>
 import TopHeader from './TopHeader'
+
 export default {
   components: {
-    TopHeader
+    TopHeader,
   },
   props: ['blok'],
   methods: {
@@ -47,35 +49,10 @@ export default {
   max-width: 50%;
 }
 
-//
-// .slide {
-//   position: relative;
-// }
-//
-// .slide-text {
-//   text-align: left;
-//   position: absolute;
-//   top: 33%;
-//   margin-left: 2rem;
-// }
-//
-// p {
-//   max-width: 50%;
-// }
-//
-// @media screen and (min-width: 501px) {
-//   .slide-text {
-//     margin-left: 5rem;
-//   }
-//
-//   h1 {
-//     font-size: 3rem;
-//   }
-// }
-//
-// @media screen and (min-width: 690px) {
-//   p {
-//     font-size: 1.5rem;
-//   }
-// }
+@media (min-width: 1281px) {
+  .container {
+    padding-top: 9em;
+  }
+}
+
 </style>
