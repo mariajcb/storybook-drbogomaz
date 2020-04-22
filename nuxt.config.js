@@ -1,4 +1,5 @@
 require('dotenv').config()
+const axios = require('axios')
 
 export default {
   mode: 'universal',
@@ -43,21 +44,42 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     ['storyblok-nuxt', {accessToken: process.env.PREVIEW_TOKEN, cacheProvider: 'memory'}]
   ],
-  /*
-  ** Build configuration
-  */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    }
-  },
   router: {
     middleware: 'languageDetection'
+  },
+  /*
+  ** Generate with Links API
+  */
+  generate: {
+    routes: function (callback) {
+      const token = `PREVIEW_TOKEN`
+      const version = 'published'
+      let cache_version = 0
+
+
+       // other routes that are not in Storyblok with their slug.
+      let routes = ['/'] // adds / directly
+
+       // Load space and receive latest cache version key to improve performance
+      axios.get(`https://api.storyblok.com/v1/cdn/spaces/me?token=${token}`).then((space_res) => {
+
+         // timestamp of latest publish
+        cache_version = space_res.data.space.version
+
+         // Call for all Links using the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
+        axios.get(`https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&cv=${cache_version}`).then((res) => {
+          Object.keys(res.data.links).forEach((key) => {
+            if (res.data.links[key].slug != 'home') {
+              routes.push('/' + res.data.links[key].slug)
+            }
+          })
+
+          callback(null, routes)
+        })
+      })
+    }
   }
 }

@@ -8,14 +8,14 @@
           </nuxt-link>
         </li>
       </ul>
-      <ul class="navbar-end">
+      <!-- <ul class="navbar-end">
         <li class="navbar-item">
           <nuxt-link to="/en/blog">English</nuxt-link>
         </li>
         <li class="navbar-item">
           <nuxt-link to="/rus/blog">Russian</nuxt-link>
         </li>
-      </ul>
+      </ul> -->
     </nav>
   </header>
 </template>
@@ -52,7 +52,7 @@
     letter-spacing: .5px;
     font-size: 24px;
   }
-  
+
   a:hover {
     color: #718FCB;
   }
