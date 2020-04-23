@@ -35,9 +35,9 @@
               <p class="has-text-weight-semibold">The best way to learn information is to teach it</p>
               <ul>
                 <li>China Institute of Psychology</li>
-                <li>American Psychological Association annual conventions</li>
-                <li>American Group Psychotherapy annual conventions</li>
-                <li>American Group Psychotherapy annual meetings</li>
+                <li>American Psychological Association</li>
+                <li>American Group Psychotherapy</li>
+                <li>Jacksonville Naval Base</li>
               </ul>
           </div>
           <button class="button is-medium">{{ blok.call_to_action_btn }}</button>

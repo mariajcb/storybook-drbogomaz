@@ -1,21 +1,21 @@
 <template>
   <header class="top-header">
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <ul class="navbar-item navbar-start">
+      <!-- <ul class="navbar-item navbar-start">
         <li class="navbar-item" v-for="(navitem, index) in $store.state.settings.main_nav" :key="index">
           <nuxt-link :to="navitem.link.cached_url">
             {{ navitem.name }}
           </nuxt-link>
         </li>
-      </ul>
-      <!-- <ul class="navbar-end">
-        <li class="navbar-item">
-          <nuxt-link to="/en/blog">English</nuxt-link>
-        </li>
-        <li class="navbar-item">
-          <nuxt-link to="/rus/blog">Russian</nuxt-link>
-        </li>
       </ul> -->
+      <ul class="navbar-start">
+        <li class="navbar-item">
+          <nuxt-link to="/">Home</nuxt-link>
+        </li>
+        <li class="navbar-item">
+          <nuxt-link to="/en/blog">Blog</nuxt-link>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
