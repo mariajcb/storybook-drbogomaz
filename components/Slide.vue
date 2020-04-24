@@ -1,6 +1,6 @@
 <template>
   <div class="slide hero is-fullheight-with-navbar has-background" v-editable="blok">
-    <TopHeader />
+    <!-- <TopHeader /> -->
     <img class="hero-background" :src="blok.image">
     <div class="hero-body">
       <div class="container">
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import TopHeader from './TopHeader'
+// import TopHeader from './TopHeader'
 
 export default {
-  components: {
-    TopHeader,
-  },
+  // components: {
+  //   TopHeader,
+  // },
   props: ['blok'],
   methods: {
     transformImage(image, option) {
@@ -45,13 +45,17 @@ export default {
   width: 100%;
 }
 
-.subtitle {
-  max-width: 50%;
+.container {
+  padding-top: 70%;
 }
 
 @media (min-width: 1281px) {
   .container {
-    padding-top: 9em;
+    padding-top: 20%;
+  }
+
+  .subtitle {
+    max-width: 50%;
   }
 }
 
