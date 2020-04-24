@@ -29,14 +29,14 @@
                 <li>Co-treasurer for the American Board of Group Psychology</li>
                 <li>Examiner for psychologists seeking board certification in group psychology</li>
                 <li>Member of the board of the International Board Certification of Group Psychotherapists</li>
-                <li>Part of the committee of APA and Division Relations (CODAPAR), tasked with training the president-elects of new divisions, as well as reviewing grant submissions</li>
+                <li>Member of Committee of APA and Division Relations (CODAPAR), tasked with training the president-elects of new divisions, as well as reviewing grant submissions</li>
               </ul>
             <h3 class="title is-marginless">Professional Presentations</h3>
               <p class="has-text-weight-semibold">The best way to learn information is to teach it</p>
               <ul>
                 <li>China Institute of Psychology</li>
                 <li>American Psychological Association</li>
-                <li>American Group Psychotherapy</li>
+                <li>American Group Psychotherapy Association</li>
                 <li>Jacksonville Naval Base</li>
               </ul>
           </div>

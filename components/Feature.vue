@@ -1,5 +1,6 @@
 <template>
   <div v-editable="blok" class="feature">
+    <!-- TODO: find 80X80 icon -->
     <!-- <img :src="resizedIcon" class="feature__icon"> -->
     <h2 class="title">{{ blok.name }}</h2>
     <p>
@@ -24,9 +25,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.feature__icon {
-  max-width: 24px;
-}
+// .feature__icon {
+//   max-width: 24px;
+// }
 
 .button {
   background-color: #718FCB;
