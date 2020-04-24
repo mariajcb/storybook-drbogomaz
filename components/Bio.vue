@@ -1,5 +1,5 @@
 <template lang="html">
-  <div v-editable="blok" class="card">
+  <div v-editable="blok" class="card bio">
     <div class="card-image is-hidden-tablet">
       <figure class="image is-225X255">
         <img :src="blok.image_mobile" :alt="blok.image_mobile.description">
