@@ -1,6 +1,5 @@
 <template>
   <div class="slide hero is-fullheight-with-navbar has-background" v-editable="blok">
-    <!-- <TopHeader /> -->
     <img class="hero-background" :src="blok.image">
     <div class="hero-body">
       <div class="container">
@@ -13,12 +12,7 @@
 </template>
 
 <script>
-// import TopHeader from './TopHeader'
-
 export default {
-  // components: {
-  //   TopHeader,
-  // },
   props: ['blok'],
   methods: {
     transformImage(image, option) {
@@ -43,6 +37,16 @@ export default {
   object-fit: cover;
   object-position: center center;
   width: 100%;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #718FCB;
+}
+
+.button:hover {
+  background-color: #718FCB;
+  color: #ffffff;
 }
 
 .container {

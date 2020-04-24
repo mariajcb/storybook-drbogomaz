@@ -8,13 +8,13 @@
 
 <style lang="scss">
 .bottom-footer {
-  background: #e3f2ed;
+  background-color: #E8EFF5;
   padding: 40px 0 120px 0;
   text-align: center;
 }
 
 .bottom-footer__link {
-  color: #8ba19a;
+  color: #363636;
   text-decoration: none;
 }
 </style>

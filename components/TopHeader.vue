@@ -1,51 +1,49 @@
 <template>
-  <header class="top-header">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <!-- <ul class="navbar-item navbar-start">
-        <li class="navbar-item" v-for="(navitem, index) in $store.state.settings.main_nav" :key="index">
-          <nuxt-link :to="navitem.link.cached_url">
-            {{ navitem.name }}
-          </nuxt-link>
-        </li>
-      </ul> -->
-      <ul class="navbar-start">
-        <li class="navbar-item">
-          <nuxt-link to="/">Home</nuxt-link>
-        </li>
-        <li class="navbar-item">
-          <nuxt-link to="/en/blog">Blog</nuxt-link>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <span class="top-header__logo">Dr.Bogomaz</span>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" @click="isOpen = !isOpen" v-bind:class="{'is-active': isOpen}">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu" v-bind:class="{'is-active': isOpen}">
+        <ul class="navbar-end">
+            <li><nuxt-link to="/" class="navbar-item is-tab">Home</nuxt-link></li>
+            <li><nuxt-link to="/en/blog" class="navbar-item is-tab">Blog</nuxt-link></li>
+        </ul>
+    </div>
+  </nav>
 </template>
 
-<style lang="scss">
-  .top-header {
-    justify-content: space-between;
-    padding: 25px 50px;
-    max-width: 75em;
-  }
-  .top-header__logo {
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    text-decoration: none;
-    color: #718FCB;
-    // img {
-    //   position: relative;
-    //   max-height: 60px;
-    //   left: -50%;
-    //   top: -15px;
-    // }
-    span {
-      font-family: 'Mrs Saint Delafield', cursive;
-      font-size: 2.75rem;
-      position: relative;
-      max-height: 60px;
-      left: -50%;
+<script>
+export default {
+  data () {
+    return {
+      isOpen: false
     }
   }
+}
+</script>
+
+<style lang="scss">
+  .navbar {
+    padding: 1rem 4rem;
+    background-color: #E8EFF5;
+  }
+  .top-header__logo {
+    color: #718FCB;
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 2.75rem;
+    max-height: 60px;
+    margin-top: .5rem;
+  }
+
+  .navbar-item.is-tab {
+    border-bottom: none;
+  }
+
   a {
     color: black;
     font-weight: bold;
