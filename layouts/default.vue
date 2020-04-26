@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="site">
     <TopHeader/>
-    <main id="main" role="main">
+    <main class="site-content" role="main">
       <nuxt/>
     </main>
     <BottomFooter/>
@@ -22,4 +22,13 @@ export default {
 
 <style lang="scss">
 @import '../assets/scss/styles.scss';
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
 </style>
