@@ -1,13 +1,13 @@
 <template>
-  <section class="util__container">
-    <div :key="blogPost.content._uid" v-for="blogPost in data.stories" class="blog__overview">
+  <section class="section">
+    <div :key="blogPost.content._uid" v-for="blogPost in data.stories" class="container blog__overview">
       <h2>
         <nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
           {{ blogPost.content.name }}
         </nuxt-link>
       </h2>
       <small>
-        {{ blogPost.published_at }}
+        {{ timestamp(blogPost.published_at) }}
       </small>
       <p>
         {{ blogPost.content.intro }}
@@ -33,6 +33,13 @@ export default {
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
+  },
+  methods: {
+    timestamp () {
+      const date = new Date()
+      const timeStamp = date.toISOString().slice(0, -5).replace(/T/g, ' ')
+      return timeStamp
+    }
   }
 }
 </script>

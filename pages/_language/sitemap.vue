@@ -1,7 +1,7 @@
 <template>
-  <section class="util__container">
-    <div class="sitemap">
-      <h1>Sitemap</h1>
+  <section class="section">
+    <div class="container">
+      <h2 class="title">Sitemap</h2>
 
       <div v-for="language in tree" :key="language.id">
         <ul>
@@ -79,10 +79,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.sitemap {
-  max-width: 600px;
-  margin: 20px auto 60px;
-}
-</style>
