@@ -1,16 +1,14 @@
 <template>
-  <footer class="bottom-footer">
-    <div class="util__container">
+  <footer class="footer">
+    <div class="content has-text-centered">
       <nuxt-link class="bottom-footer__link" to="/en/sitemap">Sitemap</nuxt-link>
     </div>
   </footer>
 </template>
 
 <style lang="scss">
-.bottom-footer {
+.footer {
   background-color: #E8EFF5;
-  padding: 40px 0 120px 0;
-  text-align: center;
 }
 
 .bottom-footer__link {

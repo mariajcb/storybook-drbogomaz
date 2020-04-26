@@ -42,18 +42,17 @@ export default {
 .button {
   background-color: #ffffff;
   color: #718FCB;
-}
-
-.button:hover {
-  background-color: #718FCB;
-  color: #ffffff;
+  &:hover {
+    background-color: #718FCB;
+    color: #ffffff;
+  }
 }
 
 .container {
   padding-top: 70%;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1000px) {
   .container {
     padding-top: 20%;
   }
