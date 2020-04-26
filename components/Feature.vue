@@ -6,7 +6,24 @@
     <p>
       {{ blok.description }}
     </p>
-    <button class="button is-medium">Learn More</button>
+    <button class="button is-medium" @click="isOpen = !isOpen">Learn More</button>
+
+    <div class="modal" v-bind:class="{'is-active': isOpen}">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">{{ blok.name }}</p>
+          <button class="delete" aria-label="close" @click="isOpen = !isOpen"></button>
+        </header>
+        <section class="modal-card-body" v-html="$options.filters.markdown(blok.modal)">
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Book Session</button>
+          <button class="button" @click="isOpen = !isOpen">Cancel</button>
+        </footer>
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -20,7 +37,12 @@ export default {
   //     return null
   //   }
   // },
-  props: ['blok']
+  props: ['blok'],
+  data () {
+    return {
+      isOpen: false
+    }
+  }
 }
 </script>
 
@@ -50,5 +72,13 @@ export default {
 
 h2, p {
   margin: 0;
+}
+
+.modal-card-head, .modal-card-foot {
+  background-color: #E8EFF5;
+}
+
+.modal-card-body {
+  padding: 2rem;
 }
 </style>
