@@ -5,7 +5,7 @@
       <div class="container">
         <h1 class="title">{{ blok.title }}</h1>
         <p class="subtitle">{{ blok.text }}</p>
-        <button class="button is-medium">Contact Me</button>
+        <nuxt-link class="button is-medium" to="/contact">Contact Me</nuxt-link>
       </div>
     </div>
   </div>

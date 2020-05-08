@@ -5,12 +5,14 @@ import Slide from '~/components/Slide.vue'
 import Grid from '~/components/Grid.vue'
 import Feature from '~/components/Feature.vue'
 import Bio from '~/components/Bio.vue'
+import ContactForm from '~/components/ContactForm.vue'
 import SitemapItem from '~/components/SitemapItem.vue'
 
 Vue.component('page', Page)
 Vue.component('teaser', Teaser)
 Vue.component('slide', Slide)
 Vue.component('grid', Grid)
-Vue.component('bio', Bio)
 Vue.component('feature', Feature)
+Vue.component('bio', Bio)
+Vue.component('contact-form', ContactForm)
 Vue.component('sitemap-item', SitemapItem)

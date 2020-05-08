@@ -12,6 +12,7 @@
         <ul class="navbar-end">
             <li><nuxt-link to="/" class="navbar-item is-tab">Home</nuxt-link></li>
             <li><nuxt-link to="/en/blog" class="navbar-item is-tab">Blog</nuxt-link></li>
+            <li><nuxt-link to="/contact" class="navbar-item is-tab">Contact</nuxt-link></li>
         </ul>
     </div>
   </nav>
@@ -51,7 +52,9 @@ export default {
     font-size: 24px;
   }
 
+  // TODO: figure out specificity on this one
+  // TODO: active link styling
   a:hover {
-    color: #718FCB;
+    color: #718FCB!important;
   }
 </style>

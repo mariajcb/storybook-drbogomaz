@@ -32,7 +32,8 @@ export default {
   */
   plugins: [
     '~/plugins/components',
-    '~/plugins/filters'
+    '~/plugins/filters',
+    '~/plugins/vee-validate'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -41,6 +42,15 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
   ],
+  /*
+  ** Form Validation
+  */
+  build: {
+  // Add exception
+    transpile: [
+      "vee-validate/dist/rules"
+    ]
+  },
   /*
   ** Nuxt.js modules
   */
@@ -60,10 +70,10 @@ export default {
       const version = 'published'
       let cache_version = 0
 
-      let toIgnore = ['home', 'en/settings']
+      let toIgnore = ['home', 'en/settings', 'en']
 
        // other routes that are not in Storyblok with their slug.
-      let routes = ['/'] // adds / directly
+      let routes = ['/', '/contact'] // adds / directly
 
        // Load space and receive latest cache version key to improve performance
       axios.get(`https://api.storyblok.com/v1/cdn/spaces/me?token=${token}`).then((space_res) => {
