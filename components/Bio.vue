@@ -40,7 +40,7 @@
                 <li>Jacksonville Naval Base</li>
               </ul>
           </div>
-          <button class="button is-medium">{{ blok.call_to_action_btn }}</button>
+          <nuxt-link class="button is-medium" to="/contact">{{ blok.call_to_action_btn }}</nuxt-link>
         </div>
       </div>
     </div>
@@ -53,8 +53,18 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 p {
   margin-top: .2rem;
+}
+
+.button {
+  background-color: #718FCB;
+  margin-top: auto;
+  color: #ffffff;
+  &:hover {
+    background-color: #ffffff;
+    color: #718FCB;
+  }
 }
 </style>

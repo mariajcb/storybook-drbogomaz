@@ -18,11 +18,10 @@
         <section class="modal-card-body" v-html="$options.filters.markdown(blok.modal)">
         </section>
         <footer class="modal-card-foot">
-          <button class="button is-success">Book Session</button>
-          <button class="button" @click="isOpen = !isOpen">Cancel</button>
+          <button class="button button-cancel" @click="isOpen = !isOpen"><strong>Cancel</strong></button>
+          <nuxt-link class="button" to="/contact">Book Session</nuxt-link>
         </footer>
       </div>
-
     </div>
   </div>
 </template>
@@ -55,11 +54,19 @@ export default {
   background-color: #718FCB;
   margin-top: auto;
   color: #ffffff;
+  &:hover {
+    background-color: #ffffff;
+    color: #718FCB;
+  }
 }
 
-.button:hover {
+.button-cancel {
   background-color: #ffffff;
   color: #718FCB;
+  &:hover {
+    background-color: #718FCB;
+    color: #ffffff;
+  }
 }
 
 .feature {
