@@ -59,6 +59,7 @@
             <textarea
               required
               :class=" errors[0] ? 'textarea is-danger' : 'textarea' "
+              v-model="message"
               type="textarea"
               name="message"
               placeholder="Leave a message...">
