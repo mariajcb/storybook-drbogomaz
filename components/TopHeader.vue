@@ -50,11 +50,12 @@ export default {
     font-weight: bold;
     letter-spacing: .5px;
     font-size: 24px;
+    &:hover {
+      color: #718FCB!important;
+    }
   }
 
-  // TODO: figure out specificity on this one
-  // TODO: active link styling
-  a:hover {
-    color: #718FCB!important;
+  .nuxt-link-exact-active {
+    color: #718FCB;
   }
 </style>
