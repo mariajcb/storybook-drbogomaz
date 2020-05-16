@@ -56,6 +56,9 @@ export default {
 }
 
 .blog__detail-link {
-  color: #000;
+  color: #718FCB;
+  &:hover {
+    color: #363636!important;
+  }
 }
 </style>
