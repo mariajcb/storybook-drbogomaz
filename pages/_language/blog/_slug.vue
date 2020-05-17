@@ -56,10 +56,10 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .blog {
   padding: 0 20px;
-  max-width: 600px;
+  max-width: 800px;
   margin: 40px auto 100px;
 
   img {

@@ -48,7 +48,7 @@ export default {
 .blog__overview {
   padding: 0 20px;
   max-width: 600px;
-  margin: 40px auto 60px;
+  margin: 40px auto;
 
   p {
     line-height: 1.6;
@@ -57,6 +57,7 @@ export default {
 
 .blog__detail-link {
   color: #718FCB;
+  font-size: 24px;
   &:hover {
     color: #363636!important;
   }

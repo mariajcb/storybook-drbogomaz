@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .navbar {
     padding: 1rem 4rem;
     background-color: #E8EFF5;
@@ -56,6 +56,6 @@ export default {
   }
 
   .nuxt-link-exact-active {
-    color: #718FCB;
+    color: #718FCB!important;
   }
 </style>
