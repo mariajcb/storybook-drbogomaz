@@ -13,6 +13,12 @@
 
 .bottom-footer__link {
   color: #363636;
-  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: .5px;
+  font-size: 24px;
+  &:hover {
+    color: #718FCB!important;
+  }
 }
+
 </style>
