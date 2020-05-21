@@ -70,9 +70,9 @@ export default {
 }
 
 .feature {
-  height: 350px;
+  height: 380px;
   text-align: center;
-  padding: 3rem;
+  padding: 3rem 6rem;
   display: flex;
   flex-direction: column;
 }
