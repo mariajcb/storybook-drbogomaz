@@ -4,6 +4,7 @@ import Teaser from '~/components/Teaser.vue'
 import Slide from '~/components/Slide.vue'
 import Grid from '~/components/Grid.vue'
 import Feature from '~/components/Feature.vue'
+import AboutMe from '~/components/AboutMe.vue'
 import Bio from '~/components/Bio.vue'
 import ContactForm from '~/components/ContactForm.vue'
 import SitemapItem from '~/components/SitemapItem.vue'
@@ -14,5 +15,6 @@ Vue.component('slide', Slide)
 Vue.component('grid', Grid)
 Vue.component('feature', Feature)
 Vue.component('bio', Bio)
+Vue.component('about-me', AboutMe)
 Vue.component('contact-form', ContactForm)
 Vue.component('sitemap-item', SitemapItem)
