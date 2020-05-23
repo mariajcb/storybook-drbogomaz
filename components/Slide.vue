@@ -39,6 +39,13 @@ export default {
   width: 100%;
 }
 
+.hero.is-fullheight-with-navbar {
+  min-height: 0;
+  @media (min-width: 1036px) {
+    min-height: calc(100vh - 3.25rem);
+  }
+}
+
 .button {
   background-color: #ffffff;
   color: #718FCB;

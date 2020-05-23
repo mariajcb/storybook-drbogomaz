@@ -1,12 +1,11 @@
 <template lang="html">
-  <div v-editable="blok" class="card about">
-    <h2>{{ blok.body }}</h2>
-  </div>
+  <h2>This is just text</h2>
 </template>
 
 <script>
 export default {
-  props: ['blok']
+  // props: ['blok']
+  name: 'About'
 }
 </script>
 

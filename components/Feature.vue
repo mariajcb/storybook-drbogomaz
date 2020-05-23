@@ -72,9 +72,13 @@ export default {
 .feature {
   height: 380px;
   text-align: center;
-  padding: 3rem 6rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 1000px) {
+    padding: 3rem 6rem;
+  }
 }
 
 h2, p {
