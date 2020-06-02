@@ -1,5 +1,5 @@
 <template lang="html">
-  <section v-editable="blok" class="about-me">
+  <div v-editable="blok" class="section about-me">
     <div class="container">
       <div class="content">
         <h2 class="title has-text-centered">{{blok.title}}</h2>
@@ -17,7 +17,7 @@
         <nuxt-link class="button is-medium" to="/en/blog">{{ blok.call_to_action_btn }}</nuxt-link>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -27,6 +27,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .section {
+    background-color: #E8EFF5;
+    padding: 0.5rem;
+  }
+
   .container {
     padding: 0 20px;
     max-width: 750px;
@@ -66,7 +71,8 @@ export default {
     top: 10px;
     left: 10px;
     font-size: 5em;
-    color: #E8EFF5;
+    color: #718FCB;
+    opacity: 0.5;
     font-weight: normal;
   }
 
@@ -78,7 +84,8 @@ export default {
     line-height: 100px;
     right: -32px;
     font-size: 25em;
-    color: #E8EFF5;
+    color: #718FCB;
+    opacity: 0.5;
     font-weight: normal;
   }
 
@@ -91,7 +98,7 @@ export default {
 
   .button {
     background-color: #718FCB;
-    margin-top: auto;
+    margin-top: 0.6rem;
     color: #ffffff;
     font-weight: 500;
     &:hover {

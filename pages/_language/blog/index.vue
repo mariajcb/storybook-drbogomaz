@@ -7,7 +7,7 @@
         </nuxt-link>
       </h2>
       <small>
-        {{ timestamp(blogPost.published_at) }}
+        {{ blogPost.first_published_at }}
       </small>
       <p>
         {{ blogPost.content.intro }}
@@ -33,13 +33,6 @@ export default {
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
-  },
-  methods: {
-    timestamp () {
-      const date = new Date()
-      const timeStamp = date.toISOString().slice(0, -5).replace(/T/g, ' ')
-      return timeStamp
-    }
   }
 }
 </script>
