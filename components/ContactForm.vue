@@ -68,7 +68,7 @@
           <p class="help is-danger">{{ errors[0] }}</p>
         </ValidationProvider>
       </div>
-      <button type="submit" class="button is-success">Submit</button>
+      <button type="submit" class="button">Submit</button>
     </form>
     <h2 v-if="status === 'success'">Thank you, we got your submission!</h2>
     <h2 v-if="status === 'error'">
@@ -130,5 +130,16 @@ export default {
   padding: 0 20px;
   max-width: 600px;
   margin: 40px auto 60px;
+}
+
+.button {
+  background-color: #718FCB;
+  margin-top: auto;
+  color: #ffffff;
+  font-weight: 500;
+  &:hover {
+    background-color: #ffffff;
+    color: #718FCB;
+  }
 }
 </style>

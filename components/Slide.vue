@@ -49,6 +49,7 @@ export default {
 .button {
   background-color: #ffffff;
   color: #718FCB;
+  font-weight: 500;
   &:hover {
     background-color: #718FCB;
     color: #ffffff;
