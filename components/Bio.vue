@@ -32,6 +32,7 @@ export default {
   background-color: #718FCB;
   margin-top: auto;
   color: #ffffff;
+  font-weight: 500;
   &:hover {
     background-color: #ffffff;
     color: #718FCB;

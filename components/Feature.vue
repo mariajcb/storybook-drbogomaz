@@ -54,6 +54,7 @@ export default {
   background-color: #718FCB;
   margin-top: auto;
   color: #ffffff;
+  font-weight: 500;
   &:hover {
     background-color: #ffffff;
     color: #718FCB;
@@ -63,6 +64,7 @@ export default {
 .button-cancel {
   background-color: #ffffff;
   color: #718FCB;
+  font-weight: 500;
   &:hover {
     background-color: #718FCB;
     color: #ffffff;
