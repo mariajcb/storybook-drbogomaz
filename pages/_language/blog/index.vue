@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <div class="section">
     <div :key="blogPost.content._uid" v-for="blogPost in data.stories" class="container blog__overview">
       <h2>
         <nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
@@ -7,13 +7,13 @@
         </nuxt-link>
       </h2>
       <small>
-        {{ blogPost.first_published_at }}
+        {{ timestamp(blogPost.created_at) }}
       </small>
       <p>
         {{ blogPost.content.intro }}
       </p>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -33,11 +33,17 @@ export default {
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
+  },
+  methods: {
+    timestamp (date) {
+      const timeStamp = date.slice(0, -5).replace(/T/g, ' ')
+      return timeStamp
+    }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .blog__overview {
   padding: 0 20px;
   max-width: 600px;
@@ -51,6 +57,7 @@ export default {
 .blog__detail-link {
   color: #718FCB;
   font-size: 24px;
+  font-weight: 500;
   &:hover {
     color: #363636!important;
   }
