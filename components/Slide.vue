@@ -45,14 +45,6 @@ export default {
     background-color: #718FCB;
     color: #ffffff;
   }
-<<<<<<< HEAD
-}
-
-.container {
-  padding-top: 70%;
-}
-
-=======
 }
 
 .container {
