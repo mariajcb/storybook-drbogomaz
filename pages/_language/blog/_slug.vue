@@ -3,24 +3,18 @@
     <div v-editable="story.content" class="blog">
       <h2 class="title">{{ story.content.name }}</h2>
       <p class="subtitle">{{ story.content.intro }}</p>
-      <div class="blog__body" v-html="body">
+      <div class="blog__body" v-html="$options.filters.markdown(story.content.body)">
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import marked from 'marked'
 
 export default {
   data () {
     return {
       story: { content: { body: '' } }
-    }
-  },
-  computed: {
-    body () {
-      return marked(this.story.content.body)
     }
   },
   mounted () {

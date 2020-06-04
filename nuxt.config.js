@@ -32,7 +32,8 @@ export default {
   */
   plugins: [
     '~/plugins/components',
-    '~/plugins/filters',
+    '~/plugins/filters/marked',
+    '~/plugins/filters/cdn',
     '~/plugins/vee-validate'
   ],
   /*

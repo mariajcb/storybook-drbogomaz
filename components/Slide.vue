@@ -1,6 +1,6 @@
 <template>
   <div class="slide hero is-fullheight-with-navbar has-background" v-editable="blok">
-    <img class="hero-background" :src="blok.image">
+    <img class="hero-background" :src="blok.image | cdn">
     <div class="hero-body">
       <div class="container">
         <h1 class="title">{{ blok.title }}</h1>
@@ -13,16 +13,7 @@
 
 <script>
 export default {
-  props: ['blok'],
-  methods: {
-    transformImage(image, option) {
-      if (!image) return ""
-      if (!option) return ""
-      let imageService = "//img2.storyblok.com/"
-      let path = image.replace("//a.storyblok.com", "")
-      return imageService + option + path
-    }
-  }
+  props: ['blok']
 }
 </script>
 

@@ -36,6 +36,7 @@ export default {
   .top-header__logo {
     color: #718FCB;
     font-family: 'Mrs Saint Delafield', cursive;
+    font-weight: 700;
     font-size: 2.75rem;
     max-height: 60px;
     margin-top: .5rem;

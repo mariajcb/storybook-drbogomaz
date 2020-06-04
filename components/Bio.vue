@@ -9,7 +9,7 @@
       <div class="media">
         <div class="media-left is-hidden-touch">
           <figure class="image is-400X600">
-            <img :src="blok.image" :alt="blok.image.description">
+            <img :src="blok.image | cdn" :alt="blok.image.description">
           </figure>
         </div>
         <div class="media-content">
