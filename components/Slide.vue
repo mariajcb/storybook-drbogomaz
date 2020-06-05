@@ -51,7 +51,6 @@ export default {
   padding-top: 70%;
 }
 
->>>>>>> 8eccb607d2620a16831dcff64327998ea8aaba56
 @media (min-width: 1000px) {
   .container {
     padding-top: 20%;
