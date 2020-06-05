@@ -1,6 +1,6 @@
 <template lang="html">
   <div v-editable="blok" class="section about-me">
-    <div class="container">
+    <div class="container container-1">
       <div class="content">
         <h2 class="title has-text-centered">{{blok.title}}</h2>
         <p class="subtitle" v-html="$options.filters.markdown(blok.text)"></p>
@@ -28,7 +28,8 @@ export default {
 
 <style lang="scss" scoped>
   .section {
-    background-color: #E8EFF5;
+    background-color: #F4F7FA;
+    background: linear-gradient(to bottom, #fff, #E8EFF5);
     padding: 0.5rem;
   }
 
@@ -36,6 +37,10 @@ export default {
     padding: 0 20px;
     max-width: 750px;
     margin: 40px auto;
+  }
+
+  .container-1 {
+    margin: 0 auto 40px;
   }
 
   .title {

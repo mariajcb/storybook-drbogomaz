@@ -1,6 +1,6 @@
 <template>
   <div class="slide hero is-fullheight-with-navbar has-background" v-editable="blok">
-    <img class="hero-background" :src="blok.image | cdn">
+    <img class="hero-background" :src="blok.image | cdn" :alt="blok.image.description">
     <div class="hero-body">
       <div class="container">
         <h1 class="title">{{ blok.title }}</h1>

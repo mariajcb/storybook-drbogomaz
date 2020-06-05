@@ -31,12 +31,14 @@ export default {
 <style lang="scss" scoped>
   .navbar {
     padding: 1rem 4rem;
-    background-color: #E8EFF5;
+    background-color: #F4F7FA;
   }
+
   .top-header__logo {
     color: #718FCB;
     font-family: 'Mrs Saint Delafield', cursive;
     font-size: 2.75rem;
+    font-weight: bold;
     max-height: 60px;
     margin-top: .5rem;
   }
