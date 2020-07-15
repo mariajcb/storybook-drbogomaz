@@ -7,6 +7,7 @@
         </figure>
       </div>
       <div class="card-content">
+        <h2 class="title has-text-centered">{{blok.title}}</h2>
         <div class="media">
           <div class="media-left is-hidden-touch">
             <figure class="image is-400X600">
@@ -15,8 +16,10 @@
           </div>
           <div class="media-content">
             <div class="content" v-html="$options.filters.markdown(blok.text)"></div>
-            <nuxt-link class="button is-medium" to="/contact">{{ blok.call_to_action_btn }}</nuxt-link>
           </div>
+        </div>
+        <div class="button-box has-text-centered">
+          <nuxt-link class="button is-medium" to="/contact">{{ blok.call_to_action_btn }}</nuxt-link>
         </div>
       </div>
     </div>
@@ -30,6 +33,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title {
+  color: #718FCB;
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
 .button {
   background-color: #718FCB;
   margin-top: auto;

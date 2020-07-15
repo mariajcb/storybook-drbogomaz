@@ -4,6 +4,7 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title">{{ blok.title }}</h1>
+        <h2 class="subtitle"><strong>{{ blok.subtitle }}</strong></h2>
         <p class="subtitle">{{ blok.text }}</p>
         <nuxt-link class="button is-medium" to="/contact">Contact Me</nuxt-link>
       </div>
@@ -53,7 +54,7 @@ export default {
 
 @media (min-width: 1000px) {
   .container {
-    padding-top: 20%;
+    padding-top: 23%;
   }
 
   .subtitle {
